@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery • Shiksha Abhiyan Educational Society</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384‐ENjdO4Dr2bkBIFxQpeo0gT8FdauYzLoU5KJ5f3IqKZ4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512‐pCWxxN57cYVtbMHgRVleXf7M50pnJHgQ+s4Vz0f5m9Eb5JC/69Xfl6Xe9R0ygLk3g06hofflV2qFQ0nv+/aGDg=="
+      crossorigin="anonymous"
+      referrerpolicy="no‐referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+  </head>
+
+  <body>
+    <!-- ======== Header ======== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="images/logo.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="me-2"
+          />
+          <span class="fw-bold">Shiksha Abhiyan</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+            <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======== Gallery Header ======== -->
+    <section class="py-5 text-center bg-light">
+      <div class="container">
+        <h1 class="display-5">Our Gallery</h1>
+        <p class="lead">
+          A glimpse into our work—education sessions, plantation drives, health camps, and women’s workshops.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======== Photo Gallery Grid ======== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Repeat this block for each image in images/gallery/ -->
+          <!-- Gallery Item 1 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-item">
+              <img
+                src="images/gallery/camp1.jpg"
+                alt="Medical Camp at Sita Puri"
+                class="img-fluid rounded"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-bs-image="images/gallery/camp1.jpg"
+              />
+            </div>
+          </div>
+          <!-- Gallery Item 2 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-item">
+              <img
+                src="images/gallery/plantation1.jpg"
+                alt="Tree Plantation Drive"
+                class="img-fluid rounded"
+                data-bs-toggle="modal"
+                data-bs-target="#galleryModal"
+                data-bs-image="images/gallery/plantation1.jpg"
+              />
+            </div>
+          </div>
+          <!-- ... repeat for all other gallery images ... -->
+
+          <!-- Gallery Item N -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Gallery Modal (Lightbox) ======== -->
+    <div
+      class="modal fade"
+      id="galleryModal"
+      tabindex="-1"
+      aria-labelledby="galleryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body p-0">
+            <img src="" alt="" id="galleryModalImage" class="img-fluid rounded" />
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+            <button
+              type="button"
+              class="btn btn-outline-light"
+              data-bs-dismiss="modal"
+            >
+              Close&nbsp;<i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== Footer ======== -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+              <li><a href="programs.html" class="text-white text-decoration-none">Programs</a></li>
+              <li><a href="donate.html" class="text-white text-decoration-none">Donate</a></li>
+              <li><a href="volunteer.html" class="text-white text-decoration-none">Volunteer</a></li>
+              <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div class="col-md-4 mb-3">
+            <h5>Contact Us</h5>
+            <p class="mb-1">
+              House No-20, Block J1, Lane No. 38<br />
+              Chanakya Place, Janak Puri<br />
+              New Delhi − 110059
+            </p>
+            <p class="mb-1">Phone: +91-9911769755</p>
+            <p class="mb-1">Email: ngoshikshaabhiyan@gmail.com</p>
+          </div>
+          <!-- Legal & Finance -->
+          <div class="col-md-4 mb-3">
+            <h5>Legal &amp; Finance</h5>
+            <p class="mb-1">
+              Regd. Societies Act: S/64796 (18-Feb-2009)<br />
+              LEI Code: 3358002MHLO2SC3DJT14
+            </p>
+            <p class="mb-1">GSTIN: 07AAGCS0152N1ZF</p>
+            <p class="mb-1">
+              Bank: Kotak Mahindra Bank (CMS A/C)<br />
+              A/C No.: 1234 5678 9012 3456<br />
+              IFSC: KKBK000XXXX
+            </p>
+            <p>80G Tax Exempt: Yes (PAN/Aadhaar required for ₹20,000+ donations)</p>
+          </div>
+        </div>
+        <hr class="border-light" />
+        <div class="row">
+          <div class="col-12 text-center">
+            <small>© 2025 Shiksha Abhiyan Educational Society. All rights reserved.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (Popper + Bootstrap JS) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384‐QF1SkPKWMZOw8Mp+YpJJaDpkw1axpjr4QF0YxlwCTVbR1mh9BDbtBTJxzPBBT8jZ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Lightbox functionality: display clicked image in modal
+      const galleryModal = document.getElementById("galleryModal");
+      const galleryModalImage = document.getElementById("galleryModalImage");
+      document.querySelectorAll(".gallery-item img").forEach((img) => {
+        img.addEventListener("click", (e) => {
+          const src = e.currentTarget.getAttribute("data-bs-image");
+          galleryModalImage.setAttribute("src", src);
+        });
+      });
+    </script>
+  </body>
+</html>

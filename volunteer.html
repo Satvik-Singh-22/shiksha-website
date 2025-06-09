@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volunteer • Shiksha Abhiyan Educational Society</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384‐ENjdO4Dr2bkBIFxQpeo0gT8FdauYzLoU5KJ5f3IqKZ4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512‐pCWxxN57cYVtbMHgRVleXf7M50pnJHgQ+s4Vz0f5m9Eb5JC/69Xfl6Xe9R0ygLk3g06hofflV2qFQ0nv+/aGDg=="
+      crossorigin="anonymous"
+      referrerpolicy="no‐referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+  </head>
+
+  <body>
+    <!-- ======== Header ======== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="images/logo.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="me-2"
+          />
+          <span class="fw-bold">Shiksha Abhiyan</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="volunteer.html">Volunteer</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======== Volunteer Page Header ======== -->
+    <section class="py-5 text-center bg-light">
+      <div class="container">
+        <h1 class="display-5">Join as a Volunteer</h1>
+        <p class="lead">
+          Your time and skills can transform lives. Fill out the form below to become part of our volunteer family.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======== Volunteer Form ======== -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">Volunteer Registration Form</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+  <div class="row g-3">
+  <div class="row g-3">
+    <!-- Full Name -->
+    <div class="col-md-6">
+      <label for="fullName" class="form-label">Full Name *</label>
+      <input type="text" class="form-control" id="fullName" name="fullName" required />
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email Address *</label>
+      <input type="email" class="form-control" id="email" name="email" required />
+    </div>
+
+    <!-- Phone -->
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone Number *</label>
+      <input type="tel" class="form-control" id="phone" name="phone" required />
+    </div>
+
+    <!-- Are you a student? -->
+    <div class="col-md-6">
+      <label class="form-label">Are you a student? *</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="isStudent" id="studentYes" value="Yes" required />
+        <label class="form-check-label" for="studentYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="isStudent" id="studentNo" value="No" />
+        <label class="form-check-label" for="studentNo">No</label>
+      </div>
+    </div>
+
+    <!-- Unpaid internship option (conditional) -->
+    <div class="col-md-6" id="internshipOption" style="display: none;">
+      <label class="form-label">Would you like to pursue this as an unpaid internship?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="unpaidInternship" id="internYes" value="Yes" />
+        <label class="form-check-label" for="internYes">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="unpaidInternship" id="internNo" value="No" />
+        <label class="form-check-label" for="internNo">No</label>
+      </div>
+    </div>
+
+    <!-- Availability Period -->
+    <div class="col-md-6">
+      <label for="availFrom" class="form-label">Available From *</label>
+      <input type="date" class="form-control" id="availFrom" name="availabilityFrom" required />
+    </div>
+    <div class="col-md-6">
+      <label for="availTo" class="form-label">Available Till *</label>
+      <input type="date" class="form-control" id="availTo" name="availabilityTo" required />
+    </div>
+
+<!-- Drag & Drop Preferences -->
+<div class="col-12">
+  <label class="form-label">Preferred Volunteering Fields (Drag to Reorder) *</label>
+  <ul id="preferencesList" class="list-group">
+    <li class="list-group-item" draggable="true">Education</li>
+    <li class="list-group-item" draggable="true">Environment</li>
+    <li class="list-group-item" draggable="true">Health</li>
+    <li class="list-group-item" draggable="true">Women Empowerment</li>
+    <li class="list-group-item" draggable="true">Fundraising / Events</li>
+  </ul>
+  <!-- Hidden input to store the order -->
+  <input type="hidden" name="preferences_order" id="preferencesOrder" required />
+</div>
+
+
+    <!-- [Keep rest of your form unchanged below this] -->
+
+    <!-- Submit Button -->
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary btn-lg">
+        Submit Registration
+      </button>
+    </div>
+  </div>
+</form>
+
+      </div>
+    </section>
+
+    <!-- ======== Why Volunteer Section ======== -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Why Volunteer With Us?</h2>
+        <p class="mb-4">
+          By volunteering with Shiksha Abhiyan, you can:
+        </p>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+            <h5>Make an Educational Impact</h5>
+            <p>
+              Teach underprivileged students and help shape their future.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <i class="fas fa-seedling fa-3x text-success mb-3"></i>
+            <h5>Go Green</h5>
+            <p>
+              Join our plantation drives and environmental awareness campaigns.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <i class="fas fa-hand-holding-heart fa-3x text-danger mb-3"></i>
+            <h5>Serve the Community</h5>
+            <p>
+              Assist in medical camps, women’s workshops, and anti-corruption seminars.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== Footer ======== -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+              <li><a href="programs.html" class="text-white text-decoration-none">Programs</a></li>
+              <li><a href="donate.html" class="text-white text-decoration-none">Donate</a></li>
+              <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+              <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div class="col-md-4 mb-3">
+            <h5>Contact Us</h5>
+            <p class="mb-1">
+              House No-20, Block J1, Lane No. 38<br />
+              Chanakya Place, Janak Puri<br />
+              New Delhi − 110059
+            </p>
+            <p class="mb-1">Phone: +91-9911769755</p>
+            <p class="mb-1">Email: ngoshikshaabhiyan@gmail.com</p>
+          </div>
+          <!-- Legal & Finance -->
+          <div class="col-md-4 mb-3">
+            <h5>Legal &amp; Finance</h5>
+            <p class="mb-1">
+              Regd. Societies Act: S/64796 (18-Feb-2009)<br />
+              LEI Code: 3358002MHLO2SC3DJT14
+            </p>
+            <p class="mb-1">GSTIN: 07AAGCS0152N1ZF</p>
+            <p class="mb-1">
+              Bank: Kotak Mahindra Bank (CMS A/C)<br />
+              A/C No.: 1234 5678 9012 3456<br />
+              IFSC: KKBK000XXXX
+            </p>
+            <p>80G Tax Exempt: Yes (Upload PAN/Aadhaar for ₹20,000+ donations)</p>
+          </div>
+        </div>
+        <hr class="border-light" />
+        <div class="row">
+          <div class="col-12 text-center">
+            <small>© 2025 Shiksha Abhiyan Educational Society. All rights reserved.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (Popper + Bootstrap JS) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384‐QF1SkPKWMZOw8Mp+YpJJaDpkw1axpjr4QF0YxlwCTVbR1mh9BDbtBTJxzPBBT8jZ"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const studentYes = document.getElementById("studentYes");
+    const studentNo = document.getElementById("studentNo");
+    const internshipOption = document.getElementById("internshipOption");
+
+    function toggleInternship() {
+      internshipOption.style.display = studentYes.checked ? "block" : "none";
+    }
+
+    studentYes.addEventListener("change", toggleInternship);
+    studentNo.addEventListener("change", toggleInternship);
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+    <script src="js/svolunteerScripts.js"></script>
+    <script>
+  const preferencesList = document.getElementById('preferencesList');
+  const preferencesOrder = document.getElementById('preferencesOrder');
+
+  const sortable = Sortable.create(preferencesList, {
+    animation: 150,
+    onSort: function () {
+      const items = Array.from(preferencesList.children).map(li => li.textContent.trim());
+      preferencesOrder.value = items.join(',');
+    }
+  });
+
+  // Set initial value
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = Array.from(preferencesList.children).map(li => li.textContent.trim());
+    preferencesOrder.value = items.join(',');
+  });
+</script>
+
+  </body>
+</html>
