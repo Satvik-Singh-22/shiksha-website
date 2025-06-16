@@ -59,7 +59,7 @@
               <a class="nav-link active" href="donate.html">Donate</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -76,105 +76,95 @@
       </div>
     </section>
 
-    <!-- ======== Donation Options ======== -->
-    <section class="py-5">
-      <div class="container">
-        <h2 class="mb-4 text-center">How You Can Donate</h2>
 
-        <div class="row g-4">
-          <!-- Online Payment Gateway -->
-          <div class="col-md-6">
-            <div class="card h-100 shadow-sm text-center">
-              <div class="card-body">
-                <i class="fas fa-credit-card fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Online Payment (CCAvenue)</h5>
-                <p class="card-text">
-                  Click below to donate securely via credit/debit card, net banking, or UPI.
-                </p>
-                <!-- Replace the URL with your real CCAvenue checkout link -->
-                <a
-                  href="https://sandbox.ccavenue.com/DoWebTrans?command=initiateTransaction&amp;access_code=YOUR_ACCESS_CODE"
-                  class="btn btn-primary"
-                  target="_blank"
-                >
-                  Donate Online
-                </a>
-              </div>
-            </div>
+<!-- ======== Donation Form ======== -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Make a Donation</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID_HERE"
+          method="POST"
+          class="card p-4 shadow-sm"
+        >
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your name"
+            />
           </div>
-          <!-- Bank Transfer / Cheque / Demand Draft -->
-          <div class="col-md-6">
-            <div class="card h-100 shadow-sm text-center">
-              <div class="card-body">
-                <i class="fas fa-university fa-3x text-success mb-3"></i>
-                <h5 class="card-title">Bank Transfer / Cheque / DD</h5>
-                <p class="card-text mb-1">
-                  <strong>Account Name:</strong> Shiksha Abhiyan Educational Society<br />
-                  <strong>Bank:</strong> Kotak Mahindra Bank Ltd. (CMS Current Account)<br />
-                  <strong>A/C No.:</strong> 1234 5678 9012 3456<br />
-                  <strong>IFSC Code:</strong> KKBK000XXXX<br />
-                  <strong>Branch:</strong> Chanakya Place, New Delhi − 110058
-                </p>
-                <p class="mb-1">
-                  For donations above <strong>₹20,000</strong>, please email a scanned copy
-                  of your PAN and Aadhaar to <a href="mailto:ngoshikshaabhiyan@gmail.com">ngoshikshaabhiyan@gmail.com</a>
-                  for 80G tax exemption certificate.
-                </p>
-                <a href="mailto:ngoshikshaabhiyan@gmail.com" class="btn btn-primary">
-                  Email for 80G Details
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Offline Donation by Cheque/DD -->
-        <div class="row mt-5">
-          <div class="col-12">
-            <h4 class="text-center mb-3">Donate by Cheque / Demand Draft</h4>
-            <p class="text-center">
-              Make your cheque/DD payable to <strong>“Shiksha Abhiyan Educational Society”</strong>
-              and send it to:
-            </p>
-            <p class="text-center">
-              House No-20, Block J1, Lane No. 38,<br />
-              Chanakya Place, Janak Puri,<br />
-              New Delhi − 110059.
-            </p>
-            <p class="text-center">Add “Donation for Education / Environment / Health / Women Empowerment” in the memo.</p>
+          <div class="mb-3">
+            <label for="pan" class="form-label">PAN Card Number <small class="text-muted">(Required for 80G Tax Exemption)</small></label>
+            <input
+              type="text"
+              class="form-control"
+              id="pan"
+              name="pan"
+              required
+              placeholder="ABCDE1234F"
+            />
           </div>
-        </div>
 
-        <!-- Sponsorship Packages -->
-        <div class="row mt-5">
-          <h3 class="text-center mb-4">Sponsorship Packages</h3>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm text-center">
-              <div class="card-body">
-                <h5 class="card-title">₹1,000 / Month</h5>
-                <p class="card-text">Sponsors one student’s free tuition and stationery.</p>
-              </div>
-            </div>
+          <div class="mb-3">
+            <label for="program" class="form-label">Program to Support</label>
+            <select
+              class="form-select"
+              id="program"
+              name="program"
+              required
+            >
+              <option value="" disabled selected>Select a program</option>
+              <option value="Education">Education</option>
+              <option value="Health">Health</option>
+              <option value="Women Empowerment">Women Empowerment</option>
+              <option value="Environment">Environment</option>
+            </select>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm text-center">
-              <div class="card-body">
-                <h5 class="card-title">₹5,000 / Month</h5>
-                <p class="card-text">Plants 500 saplings in our next plantation drive.</p>
-              </div>
-            </div>
+
+          <div class="mb-3">
+            <label for="amount" class="form-label">Donation Amount (INR)</label>
+            <input
+              type="number"
+              class="form-control"
+              id="amount"
+              name="amount"
+              required
+              placeholder="Enter amount in ₹"
+              min="1"
+            />
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm text-center">
-              <div class="card-body">
-                <h5 class="card-title">₹10,000 / Month</h5>
-                <p class="card-text">Helps organize a full‐day medical camp for 200 beneficiaries.</p>
-              </div>
-            </div>
+
+          <div class="d-grid">
+            <!-- Optional: Redirect after form submission -->
+            <button type="submit" class="btn btn-primary">
+              Proceed to Payment
+            </button>
           </div>
+        </form>
+
+        Optional Direct Payment Link
+        <div class="text-center mt-4">
+          <p class="mb-2">Or go directly to payment gateway:</p>
+          <a
+            href="https://sandbox.ccavenue.com/DoWebTrans?command=initiateTransaction&access_code=YOUR_ACCESS_CODE"
+            class="btn btn-outline-success"
+            target="_blank"
+          >
+            Go to Payment Gateway
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- ======== Footer ======== -->
     <footer class="py-4">

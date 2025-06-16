@@ -5,6 +5,43 @@
   --bs-primary: #2c3e50;   /* Dark‐blue for NGO branding */
   --bs-secondary: #18bc9c; /* Teal accent */
 }
+.social-fixed {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.social-icon {
+  background: #fff;
+  color: #333;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  /* transition:  0.3s, color 0.3s; */
+}
+
+.social-icon:hover {
+  background: #18bc9c;
+  color: #fff;
+}
+
+.social-icon.fb { /* Facebook brand color on hover */
+  background: #3b5998;
+}
+
+.social-icon.ig { /* Instagram brand color on hover */
+  background: #E1306C;
+}
 
 /* 2) Hero Section Styling */
 .hero {
