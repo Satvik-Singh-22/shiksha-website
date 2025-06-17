@@ -54,8 +54,6 @@
   /* color: #ffffff; */
 }
 
-
-
 hero {
             position: relative;
             height: 100vh;
@@ -89,8 +87,9 @@ hero {
             position: relative;
             z-index: 2;
             color: black;
-            text-align: center;
+            /* text-align: center; */
             padding: 2rem;
+            padding-left: 0rem;
         }
 
         .hero-title {
@@ -116,8 +115,8 @@ hero {
             opacity: 0.95;
             line-height: 1.6;
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 0; /* Changed from auto to 0 for better mobile alignment */
+            margin-right: 0; /* Changed from auto to 0 for better mobile alignment */
             animation: fadeInUp 1s ease-out 0.5s both;
         }
 
@@ -135,7 +134,7 @@ hero {
         .hero-buttons {
             display: flex;
             gap: 1.5rem;
-            justify-content: center;
+            justify-content: flex-start; /* Changed from center to flex-start for better mobile alignment */
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 1s both;
         }
@@ -193,6 +192,35 @@ hero {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
         }
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem; /*  Reduced from 3rem to 1.5rem */
+  padding-left: 0; /* Reduced from 1rem to 0 */
+  padding-right: 0; /* Remove right padding */
+  flex-wrap: wrap;
+}
+
+/* Override Bootstrap container padding for hero section */
+.hero .container {
+  padding-left: 0.5rem !important; /* Minimal padding instead of Bootstrap's default */
+  padding-right: 0.5rem !important; /* Minimal padding instead of Bootstrap's default */
+}
+
+.hero-logo img {
+  max-width: 200px;
+  height: auto;
+  margin-left: 0; /* Ensure no additional left margin on logo */
+}
+
+.hero-content {
+  text-align: left; /* override center */
+  margin-right: 0; /* Ensure no additional right margin on content */
+  flex: 1;
+}
+
 /* 3) Footer Background */
 footer {
   background-color: #2c3e50;
@@ -209,7 +237,7 @@ footer {
   color: #ffffff;
 }
 
-/* 5) “Program Card” Icons (font-size) */
+/* 5) "Program Card" Icons (font-size) */
 .program-icon {
   font-size: 2.5rem;
 }
@@ -227,10 +255,195 @@ footer {
   transform: scale(1.05);
 }
 
-/* 7) Small Responsive Tweaks */
+/* 7) Mobile-First Responsive Design */
+
+/* Tablet styles */
+@media (max-width: 992px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-logo img {
+    max-width: 250px;
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-hero {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-  .hero { height: 50vh; }
-  .program-icon { font-size: 2rem; }
+  .hero { 
+    height: auto;
+    min-height: 70vh;
+    padding: 2rem 0;
+  }
+  
+  .program-icon { 
+    font-size: 2rem; 
+  }
+  
+  /* Tighter spacing on mobile */
+  .hero-flex {
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  /* Minimal container padding on mobile */
+  .hero .container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  .hero-logo img {
+    max-width: 200px;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .btn-hero {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    min-width: 160px;
+  }
+  
+  /* Social icons adjustment for mobile */
+  .social-fixed {
+    display: none; /* Hide on mobile to avoid clutter */
+  }
+  
+  /* Navbar improvements */
+  .navbar-brand span {
+    font-size: 16px !important;
+  }
+  
+  /* Card improvements */
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 576px) {
+  .hero {
+    min-height: 60vh;
+    padding: 1.5rem 0;
+  }
+  
+  .hero .container {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+  
+  .hero-flex {
+    gap: 1rem;
+  }
+  
+  .hero-logo img {
+    max-width: 150px;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 9vw, 2.2rem);
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(0.85rem, 4.5vw, 1rem);
+    line-height: 1.4;
+  }
+  
+  .hero-buttons {
+    gap: 1rem;
+  }
+  
+  .btn-hero {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    min-width: 140px;
+  }
+  
+  /* Footer improvements */
+  footer .col-md-4 {
+    margin-bottom: 2rem;
+  }
+  
+  footer h5 {
+    font-size: 1.1rem;
+  }
+  
+  footer p, footer li {
+    font-size: 0.85rem;
+  }
+  
+  /* Impact metrics responsive */
+  .py-5[style*="background: #18bc9c"] h3 {
+    font-size: 1.8rem;
+  }
+  
+  .py-5[style*="background: #18bc9c"] p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 50vh;
+  }
+  
+  .hero-flex {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .hero-content {
+    text-align: left;
+  }
+  
+  .hero-logo img {
+    max-width: 120px;
+  }
 }
 .navbar‐scrolled {
   background‐color: rgba(255, 255, 255, 0.9) !important;
