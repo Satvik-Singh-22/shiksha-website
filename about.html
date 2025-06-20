@@ -36,7 +36,7 @@
             height="40"
             class="me-2"
           />
-          <span class="fw-bold">Shiksha Abhiyan</span>
+          <span class="fw-bold">Shiksha Abhiyan NGO</span>
         </a>
         <button
           class="navbar-toggler"
@@ -84,9 +84,9 @@
             </p>
             <ul>
               <li>Expanded free tuition to over 1,200 students annually.</li>
-              <li>Planted more than 6,000 saplings in South-West Delhi.</li>
-              <li>Organized 25+ free medical camps with local doctors and nurses.</li>
-              <li>Trained 600+ women in tailoring, computer literacy, and financial planning.</li>
+              <li>Planted more than 200 saplings in South-West Delhi.</li>
+              <li>Organized several free medical camps with local doctors and nurses.</li>
+              <li>Trained women in tailoring, computer literacy, and financial planning.</li>
             </ul>
             <h3 class="mt-4">Vision &amp; Mission</h3>
             <p>
@@ -229,13 +229,11 @@
           <!-- Contact Info -->
           <div class="col-md-4 mb-3">
             <h5>Contact Us</h5>
-            <p class="mb-1">
-              House No-20, Block J1, Lane No. 38<br />
-              Chanakya Place, Janak Puri<br />
-              New Delhi − 110059
+            <p class="mb-1"> Address: <span id="ngo-address"></span>
             </p>
-            <p class="mb-1">Phone: +91-9911769755</p>
-            <p class="mb-1">Email: ngoshikshaabhiyan@gmail.com</p>
+            <p class="mb-1">Phone: +91-<span id= "contact-phone1"></span></p>
+            <p id="contact-phone2" class="mb-1"></p>
+            <p class="mb-1">Email: <span id = "contact-email"></span></p>
           </div>
           <!-- Legal & Finance -->
           <div class="col-md-4 mb-3">
@@ -269,5 +267,36 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/scripts.js"></script>
+    <script src="js/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.title = siteConfigs.siteTitle;
+    
+    const addressElement = document.getElementById("ngo-address");
+    if (addressElement && siteConfigs.ngoAddress) {
+      addressElement.textContent = siteConfigs.ngoAddress;
+    }
+
+    // Phone 1
+    const phone1Element = document.getElementById("contact-phone1");
+    if (phone1Element && siteConfigs.contactNumber1) {
+      phone1Element.textContent = "Phone: +91-" + siteConfigs.contactNumber1;
+    }
+
+    // Phone 2 (optional)
+    const phone2Element = document.getElementById("contact-phone2");
+    if (phone2Element && siteConfigs.contactNumber2) {
+      phone2Element.textContent = "Alt Phone: +91-" + siteConfigs.contactNumber2;
+    } else if (phone2Element) {
+      phone2Element.remove(); // If no second number, remove empty line
+    }  
+    const emailSpan = document.getElementById("contact-email");
+    if (emailSpan) {
+      emailSpan.textContent = siteConfigs.contactEmail;
+    }
+
+    });
+  </script>
+
   </body>
 </html>

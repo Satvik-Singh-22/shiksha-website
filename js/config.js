@@ -4,7 +4,7 @@ const siteConfigs= {
     contactEmail: "Contactngo3@gmail.com",
     contactNumber1: "9911769755",
     contactNumber2: "",
-    ngoAddress: "Mtnl, Block A, Vijay Enclave, Dabri, New Delhi, Delhi, 110046"
+    ngoAddress: "Plot No.7, Gali No.2, Vijay Enclave, Near MTNL Office, New Delhi, Delhi, 110046"
 }
 
 const websiteLinks= {

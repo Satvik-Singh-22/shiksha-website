@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Donate • Shiksha Abhiyan Educational Society</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -197,6 +197,26 @@
             display: none;
         }
 
+        .donation-notice {
+            background: linear-gradient(135deg, #ff9a56, #ff6b9d);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+        }
+
+        .donation-notice h4 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .donation-notice p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+
         .fade-in {
             animation: fadeIn 0.5s ease-in;
         }
@@ -252,11 +272,11 @@
         <img
           src="images/logo.png"
           alt="Shiksha Abhiyan Logo"
-          width="80"
-          height="80"
+          width="40"
+          height="40"
           class="me-2"
         />
-        <span class="fw-bold" style="font-size: 20px;">Shiksha Abhiyan Educational Society</span>
+        <span class="fw-bold" style="font-size: 20px;">Shiksha Abhiyan NGO</span>
       </a>
       <button
         class="navbar-toggler"
@@ -286,12 +306,35 @@
 
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="display-4">Make a Difference Today</h1>
-            <p class="lead">Your contribution empowers communities through education, healthcare, and sustainable development</p>
+    <section class="hero" id="donate">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        <div class="container hero-flex">
+            <!-- You can drop the logo here or leave it out -->
+            <div class="hero-logo"></div>
+
+            <div class="hero-content">
+            <h1 class="hero-title">Make a Difference Today</h1>
+            <p class="hero-subtitle">
+                Your contribution empowers communities through education, healthcare, 
+                and sustainable development
+            </p>
+            <!-- If you have any buttons, use the same .hero-buttons wrapper -->
+            <div class="hero-buttons">
+                <!-- example -->
+                <a href="programs.html" class="btn-hero btn-volunteer">
+                <i class="fas fa-hands-helping me-2"></i> Our Programs
+                </a>
+            </div>
+            </div>
         </div>
     </section>
+
 
     <!-- Program Selection -->
     <section class="py-5">
@@ -308,12 +351,18 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
+                    <!-- Donation Notice -->
+                    <div class="donation-notice">
+                        <h4><i class="fas fa-info-circle me-2"></i>Online Donations Coming Soon!</h4>
+                        <p>We're working hard to set up our online donation system. Thank you for your patience and interest in supporting our cause!</p>
+                    </div>
+
                     <div class="selected-program-info" id="selectedProgramInfo">
                         <!-- Selected program info will be displayed here -->
                     </div>
                     
                     <form class="donation-form" id="donationForm">
-                        <h3 class="text-center mb-4">Complete Your Donation</h3>
+                        <h3 class="text-center mb-4">Register Your Interest</h3>
                         
                         <div class="row mb-3">
                             <div class="col-md-6">
@@ -338,7 +387,7 @@
                         </div>
                         
                         <div class="mb-3">
-                            <label class="form-label">Donation Amount (₹)</label>
+                            <label class="form-label">Intended Donation Amount (₹)</label>
                             <div class="amount-suggestions">
                                 <div class="amount-btn" data-amount="500">₹500</div>
                                 <div class="amount-btn" data-amount="1000">₹1000</div>
@@ -351,16 +400,16 @@
                         
                         <div class="mb-4">
                             <label class="form-label">Message (Optional)</label>
-                            <textarea class="form-control" id="donorMessage" rows="3" placeholder="Share why you're supporting this cause..."></textarea>
+                            <textarea class="form-control" id="donorMessage" rows="3" placeholder="Share why you're interested in supporting this cause..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-donate">
-                            <i class="fas fa-heart me-2"></i>Donate Now
+                            <i class="fas fa-bell me-2"></i>Notify Me When Ready
                         </button>
                         
                         <p class="text-center mt-3 text-muted small">
                             <i class="fas fa-shield-alt me-1"></i>
-                            Your donation is secure and eligible for 80G tax benefits
+                            We'll notify you as soon as online donations are available
                         </p>
                     </form>
                 </div>
@@ -389,7 +438,7 @@
             <h5>Contact Us</h5>
             <p class="mb-1"> Address: <span id="ngo-address"></span>
             </p>
-            <p class="mb-1">Phone: +91-<span id= "contact-phone1"></span></p>
+            <p class="mb-1"><span id= "contact-phone1"></span></p>
             <p id="contact-phone2" class="mb-1"></p>
             <p class="mb-1">Email: <span id = "contact-email"></span></p>
           </div>
@@ -580,7 +629,7 @@
             // Show selected program info
             const infoDiv = document.getElementById('selectedProgramInfo');
             infoDiv.innerHTML = `
-                <h4><i class="fas fa-heart me-2"></i>Supporting: ${program.title}</h4>
+                <h4><i class="fas fa-heart me-2"></i>Interested in Supporting: ${program.title}</h4>
                 <p class="mb-0">${program.description}</p>
                 <small class="opacity-75">Impact: ${program.impact}</small>
             `;
@@ -597,7 +646,6 @@
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxW1NQ78M0hkgXziTMliTaIduSgTRaD9uFDPimSl0jHwIynDsJi3Ds8tYXXWfsEfRId/exec';
 
-
         function handleDonation() {
             const formData = {
                 program: selectedProgram,
@@ -609,46 +657,22 @@
                 message: document.getElementById('donorMessage').value
             };
 
-            // Simulate form submission
+            // Update button to show processing
             const submitBtn = document.querySelector('.btn-donate');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
             submitBtn.disabled = true;
 
-            fetch(scriptURL, {
-              method: 'POST',
-              mode: 'no-cors',
-              body: JSON.stringify(formData),
-              headers: { 'Content-Type': 'application/json' }
-            })
-            // .then(res => {
-            //   if (!res.ok) throw new Error(res.statusText);
-            //   return res.json();
-            // })
-            .then(json => {
-              alert(`Thank you ${formData.name}! Your ₹${formData.amount} for ${programs[formData.program].title} has been recorded.`);
-
+            // Simulate form submission
             setTimeout(() => {
-                alert(`Thank you ${formData.name}! Your donation of ₹${formData.amount} for ${programs[formData.program].title} has been recorded. You will receive a confirmation email shortly.`);
+                alert(`Thank you ${formData.name}! We've registered your interest in supporting ${programs[formData.program].title}. We'll notify you as soon as our online donation system is ready.`);
                 
-                // Reset form
-                document.getElementById('donationForm').reset();
-                document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('selected'));
+                // Redirect to home page after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
                 
-                // Reset button
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                
-                // Hide donation section
-                document.getElementById('donationSection').style.display = 'none';
-                document.querySelectorAll('.program-card').forEach(card => card.classList.remove('selected'));
-            });})
-            .catch(err => {
-            console.error(err);
-            alert('Oops! Something went wrong. Please try again.');
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-          });
+            }, 1500);
         }
     </script>
 </body>

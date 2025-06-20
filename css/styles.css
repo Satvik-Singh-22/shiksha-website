@@ -5,6 +5,7 @@
   --bs-primary: #2c3e50;   /* Dark‐blue for NGO branding */
   --bs-secondary: #18bc9c; /* Teal accent */
 }
+/* Default for desktop */
 .social-fixed {
   position: fixed;
   top: 50%;
@@ -16,6 +17,7 @@
   z-index: 1000;
 }
 
+/* Icon style */
 .social-icon {
   background: #fff;
   color: #333;
@@ -27,20 +29,40 @@
   justify-content: center;
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  /* transition:  0.3s, color 0.3s; */
 }
 
+/* Hover styles */
 .social-icon:hover {
   background: #18bc9c;
   color: #fff;
 }
 
-.social-icon.fb { /* Facebook brand color on hover */
+.social-icon.fb {
   background: #3b5998;
 }
 
-.social-icon.ig { /* Instagram brand color on hover */
+.social-icon.ig {
   background: #E1306C;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .social-fixed {
+    top: auto;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* transform: none; */
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
 }
 
 /* 2) Hero Section Styling */
