@@ -50,10 +50,11 @@
   .social-fixed {
     top: auto;
     bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 1 rem;
+    /* left: 50%;
+    transform: translateX(-50%); */
 
-    /* transform: none; */
+    transform: none;
     flex-direction: row;
     gap: 0.75rem;
   }

@@ -182,28 +182,39 @@
         <h2 class="mb-4">Our Partners &amp; Collaborators</h2>
         <div class="row justify-content-center g-4">
           <div class="col-md-3 col-6">
-            <img
-              src="images/partner_nulm.png"
-              alt="National Urban Livelihood Mission"
-              class="img-fluid"
-              style="max-height: 80px;"
-            />
+            <a href="https://nulm.gov.in/" target ="_blank" rel="noopener noreferrer">
+              <img
+                src="images/partner_nulm.png"
+                alt="National Urban Livelihood Mission"
+                class="img-fluid"
+                style="max-height: 80px;"
+              />
+            </a>
+            <p>National Urban Livelihood Mission</p>
           </div>
           <div class="col-md-3 col-6">
-            <img
-              src="images/partner_dmc.png"
-              alt="Delhi Minorities Commission"
-              class="img-fluid"
-              style="max-height: 80px;"
-            />
+            <a href="https://dmc.delhi.gov.in/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="images/partner_dmc.png"
+                
+                alt="Delhi Minorities Commission"
+                class="img-fluid"
+                style="max-height: 80px;"
+              />
+          </a>
+            <p>Delhi Minoritites Commission</p>
           </div>
           <div class="col-md-3 col-6">
-            <img
-              src="images/partner_nyks.png"
-              alt="Nehru Yuva Kendra Sangathan"
-              class="img-fluid"
-              style="max-height: 80px;"
-            />
+            <a href="https://nyks.nic.in/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="images/partner_nyks.png"
+                href="https://nyks.nic.in/"
+                alt="Nehru Yuva Kendra Sangathan"
+                class="img-fluid"
+                style="max-height: 80px;"
+              />
+              </a>
+            <p>Nehru Yuva Kendra Sangathan</p>
           </div>
           
         </div>
@@ -211,54 +222,42 @@
     </section>
 
     <!-- ======== Footer ======== -->
-    <footer class="py-4">
-      <div class="container">
-        <div class="row">
-          <!-- Quick Links -->
-          <div class="col-md-4 mb-3">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-              <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-              <li><a href="programs.html" class="text-white text-decoration-none">Programs</a></li>
-              <li><a href="donate.html" class="text-white text-decoration-none">Donate</a></li>
-              <li><a href="volunteer.html" class="text-white text-decoration-none">Volunteer</a></li>
-              <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
-            </ul>
-          </div>
-          <!-- Contact Info -->
-          <div class="col-md-4 mb-3">
-            <h5>Contact Us</h5>
-            <p class="mb-1"> Address: <span id="ngo-address"></span>
-            </p>
-            <p class="mb-1">Phone: +91-<span id= "contact-phone1"></span></p>
-            <p id="contact-phone2" class="mb-1"></p>
-            <p class="mb-1">Email: <span id = "contact-email"></span></p>
-          </div>
-          <!-- Legal & Finance -->
-          <div class="col-md-4 mb-3">
-            <h5>Legal &amp; Finance</h5>
-            <p class="mb-1">
-              Regd. Societies Act: S/64796 (18-Feb-2009)<br />
-              LEI Code: 3358002MHLO2SC3DJT14
-            </p>
-            <p class="mb-1">GSTIN: 07AAGCS0152N1ZF</p>
-            <p class="mb-1">
-              Bank: Kotak Mahindra Bank (CMS A/C)<br />
-              A/C No.: 1234 5678 9012 3456<br />
-              IFSC: KKBK000XXXX
-            </p>
-            <p>80G Tax Exempt: Yes (Upload PAN/Aadhaar for ₹20,000+ donations)</p>
-          </div>
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <!-- Top Row: Quick Links & Contact Us -->
+      <div class="row">
+        <!-- Quick Links -->
+        <div class="col-md-6 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="programs.html" class="text-white text-decoration-none">Programs</a></li>
+            <li><a href="donate.html" class="text-white text-decoration-none">Donate</a></li>
+            <li><a href="volunteer.html" class="text-white text-decoration-none">Volunteer</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
         </div>
-        <hr class="border-light" />
-        <div class="row">
-          <div class="col-12 text-center">
-            <small>© 2025 Shiksha Abhiyan Educational Society. All rights reserved.</small>
-          </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-6 mb-3">
+          <h5>Contact Us</h5>
+          <p class="mb-1">Address: <span id="ngo-address"></span></p>
+          <p class="mb-1"><span id="contact-phone1"></span></p>
+          <p id="contact-phone2" class="mb-1"></p>
+          <p class="mb-1">Email: <span id="contact-email"></span></p>
         </div>
       </div>
-    </footer>
+
+      <!-- Bottom Row: Footer Note -->
+      <div class="row">
+        <div class="col-12 text-center mt-3">
+          <p>© 2025 Shiksha Abhiyan Educational Society</p>
+          <p><small>Registered under Societies Act S/64796 • GSTIN: 07AAGCS0152N1ZF</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <!-- Bootstrap Bundle JS (Popper + Bootstrap JS) -->
     <script
