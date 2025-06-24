@@ -3,7 +3,7 @@ const siteConfigs= {
     siteAltTitle : "Shiksha Abhiyan NGO",
     contactEmail: "Contactngo3@gmail.com",
     contactNumber1: "9911769755",
-    contactNumber2: "",
+    contactNumber2: "9870392703",
     ngoAddress: "Plot No.7, Gali No.2, Vijay Enclave, Near MTNL Office, New Delhi, Delhi, 110046"
 }
 
