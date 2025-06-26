@@ -4,17 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reports • Shiksha Abhiyan Educational Society</title>
+      <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512‐pCWxxN57cYVtbMHgRVleXf7M50pnJHgQ+s4Vz0f5m9Eb5JC/69Xfl6Xe9R0ygLk3g06hofflV2qFQ0nv+/aGDg=="
+      crossorigin="anonymous"
+      referrerpolicy="no‐referrer"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
 
 <body>
   <!-- Header -->
+  <div class="social-fixed">
+  <a href="https://www.facebook.com/p/Shiksha-Abhiyan-NGO-100077900106003/" target="_blank" class="social-icon fb">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/ngoshikshaabhiyan/" target="_blank" class="social-icon ig">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.youtube.com/@shikshaabhiyanngo" target="_blank" class="social-icon yt">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://whatsapp.com/channel/0029VbBLPi57z4kiWG6sOp0o" target="_blank" class="social-icon wa">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="images/logo.png" alt="Logo" width="40" height="40" class="me-2" />
-        <span class="fw-bold">Shiksha Abhiyan</span>
+        <span class="fw-bold">Shiksha Abhiyan NGO</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
@@ -25,10 +52,10 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
           <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSfI9lNqHRFcr_aDrFpEAbmXVG6QuV6JtSBXzyTj0U8LxT875Q/viewform?usp=dialog">Volunteer</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li> -->
           <li class="nav-item"><a class="nav-link active" href="reports.html">Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -100,22 +127,121 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-4 bg-dark text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mb-2">
-          <h5>Shiksha Abhiyan Educational Society</h5>
-          <p>House No-20, Block J1, Lane No. 38, Chanakya Place, Janak Puri, New Delhi − 110059</p>
-          <p>Email: ngoshikshaabhiyan@gmail.com | Phone: +91-9911769755</p>
+
+  <section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Certificates</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="certificates/registration.jpg" class="card-img-top" alt="Registration Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">Registration Certificate</h5>
+            <a href="certificates/registration.jpg" target="_blank" class="btn btn-outline-primary">View Full</a>
+          </div>
         </div>
-        <div class="col-md-6 text-md-end">
-          <p>© 2025 Shiksha Abhiyan Educational Society</p>
-          <p><small>Registered under Societies Act S/64796 • GSTIN: 07AAGCS0152N1ZF</small></p>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="certificates/80g.jpg" class="card-img-top" alt="80G Certificate">
+          <div class="card-body text-center">
+            <h5 class="card-title">80G Certificate</h5>
+            <a href="certificates/80g.jpg" target="_blank" class="btn btn-outline-primary">View Full</a>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <!-- Top Row: Quick Links & Contact Us -->
+      <div class="row">
+        <!-- Quick Links -->
+        <div class="col-md-6 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="programs.html" class="text-white text-decoration-none">Programs</a></li>
+            <li><a href="donate.html" class="text-white text-decoration-none">Donate</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfI9lNqHRFcr_aDrFpEAbmXVG6QuV6JtSBXzyTj0U8LxT875Q/viewform?usp=dialog" class="text-white text-decoration-none">Volunteer</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-6 mb-3">
+          <h5>Contact Us</h5>
+          <p class="mb-1">Address: <span id="ngo-address"></span></p>
+          <p class="mb-1"><span id="contact-phone1"></span></p>
+          <p id="contact-phone2" class="mb-1"></p>
+          <p class="mb-1">Email: <span id="contact-email"></span></p>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Footer Note -->
+      <div class="row mt-3">
+      <div class="col-12 text-center">
+      <div class="mb-2">
+            <div class="social-icons social-icons-outlined">
+                <a href="https://www.facebook.com/p/Shiksha-Abhiyan-NGO-100077900106003/" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ngoshikshaabhiyan/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@shikshaabhiyanngo" target="_blank" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbBLPi57z4kiWG6sOp0o" target="_blank" class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <p>© 2025 Shiksha Abhiyan Educational Society</p>
+        <p><small>Registered under Societies Act S/64796 • GSTIN: 07AAGCS0152N1ZF</small></p>
+      </div>
+    </div>
   </footer>
+
+
+      <!-- Constant values import -->
+  <script src="js/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.title = siteConfigs.siteTitle;
+    
+    const addressElement = document.getElementById("ngo-address");
+    if (addressElement && siteConfigs.ngoAddress) {
+      addressElement.textContent = siteConfigs.ngoAddress;
+    }
+
+    // Phone 1
+    const phone1Element = document.getElementById("contact-phone1");
+    if (phone1Element && siteConfigs.contactNumber1) {
+      phone1Element.textContent = "Phone: +91-" + siteConfigs.contactNumber1;
+    }
+
+    // Phone 2 (optional)
+    const phone2Element = document.getElementById("contact-phone2");
+    if (phone2Element && siteConfigs.contactNumber2) {
+      phone2Element.textContent = "Alt Phone: +91-" + siteConfigs.contactNumber2;
+    } else if (phone2Element) {
+      phone2Element.remove(); // If no second number, remove empty line
+    }  
+    const emailSpan = document.getElementById("contact-email");
+    if (emailSpan) {
+      emailSpan.textContent = siteConfigs.contactEmail;
+    }
+
+    });
+  </script>
+
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
