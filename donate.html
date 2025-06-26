@@ -390,6 +390,15 @@
                                 <input type="text" class="form-control" id="donorPan" placeholder="For 80G Tax Exemptions">
                             </div>
                         </div>
+
+                        <div class="mb-3" id="causeOptions" style="display: none;">
+                            <label class="form-label">
+                            For which of the following causes would you like to donate?
+                            </label>
+                            <div id="causeRadios">
+                            <!-- Donation sub-options will be displayed -->
+                            </div>
+                        </div>
                         
                         <div class="mb-3">
                             <label class="form-label">Intended Donation Amount (₹)</label>
@@ -649,6 +658,51 @@
             donationSection.style.display = 'block';
             donationSection.classList.add('fade-in');
 
+            // Donation sub-options
+            const causeContainer = document.getElementById('causeOptions');
+            const causeRadios    = document.getElementById('causeRadios');
+
+            // define the choices for each program
+            const causeMap = {
+            children: [
+                'Education',
+                'Books',
+                'Stationery',
+                'Adopt a Student (Monthly EMI)'
+            ],
+            women: [
+                'Forming SHGs',
+                'Skill camps'
+            ],
+            gau: [
+                'Feeding cows',
+                'Gau Seva Kendra',
+                'Taking care of cows'
+            ]
+            };
+
+            if (causeMap[programKey]) {
+            // build the radio buttons
+            causeRadios.innerHTML = causeMap[programKey]
+                .map((opt, i) => `
+                <div class="form-check">
+                    <input class="form-check-input" 
+                        type="radio" 
+                        name="cause" 
+                        id="cause_${programKey}_${i}" 
+                        value="${opt}" 
+                        required>
+                    <label class="form-check-label" for="cause_${programKey}_${i}">
+                    ${opt}
+                    </label>
+                </div>
+                `).join('');
+            causeContainer.style.display = 'block';
+            } else {
+            causeContainer.style.display = 'none';
+            causeRadios.innerHTML = '';
+            }
+
             // Smooth scroll to form
             donationSection.scrollIntoView({ behavior: 'smooth' });
         }
@@ -656,8 +710,12 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxW1NQ78M0hkgXziTMliTaIduSgTRaD9uFDPimSl0jHwIynDsJi3Ds8tYXXWfsEfRId/exec';
 
         function handleDonation() {
+            const selectedCauseInput = document.querySelector('input[name="cause"]:checked');
+            const selectedCause = selectedCauseInput ? selectedCauseInput.value : '';
+
             const formData = {
                 program: selectedProgram,
+                cause: selectedCause,                                // cause as in sub-option for donation
                 name: document.getElementById('donorName').value,
                 email: document.getElementById('donorEmail').value,
                 phone: document.getElementById('donorPhone').value,
