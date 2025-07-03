@@ -127,33 +127,73 @@
     </div>
   </section>
 
-
-  <section class="py-5 bg-light">
+<!-- Certificates Section -->
+<section class="py-5">
   <div class="container">
     <h2 class="mb-4 text-center">Certificates</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card h-100">
-          <img src="certificates/registration.jpg" class="card-img-top" alt="Registration Certificate">
-          <div class="card-body text-center">
-            <h5 class="card-title">Registration Certificate</h5>
-            <a href="certificates/registration.jpg" target="_blank" class="btn btn-outline-primary">View Full</a>
+    <div class="accordion" id="certificatesAccordion">
+      
+      <!-- Certificate 1: Registration -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="cert1Heading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cert1">
+            Registration Certificate
+          </button>
+        </h2>
+        <div id="cert1" class="accordion-collapse collapse show" data-bs-parent="#certificatesAccordion">
+          <div class="accordion-body">
+            <div class="ratio ratio-4x3">
+              <iframe src="reports/Docs/Registration_Certificate.pdf" title="Registration Certificate" allowfullscreen></iframe>
+            </div>
+            <div class="text-center mt-3">
+              <a href="reports/Docs/Registration_Certificate.pdf" target="_blank" class="btn btn-outline-primary">Download</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6">
-        <div class="card h-100">
-          <img src="certificates/80g.jpg" class="card-img-top" alt="80G Certificate">
-          <div class="card-body text-center">
-            <h5 class="card-title">80G Certificate</h5>
-            <a href="certificates/80g.jpg" target="_blank" class="btn btn-outline-primary">View Full</a>
+      <!-- Certificate 2: 80G -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="cert2Heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cert2">
+            80G Certificate
+          </button>
+        </h2>
+        <div id="cert2" class="accordion-collapse collapse" data-bs-parent="#certificatesAccordion">
+          <div class="accordion-body">
+            <div class="ratio ratio-4x3">
+              <iframe src="reports/Docs/80GC.pdf" title="80G Certificate" allowfullscreen></iframe>
+            </div>
+            <div class="text-center mt-3">
+              <a href="reports/Docs/80GC.pdf" target="_blank" class="btn btn-outline-primary">Download</a>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Certificate 3: CSR-1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="cert3Heading">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cert3">
+            CSR-1 Certificate
+          </button>
+        </h2>
+        <div id="cert3" class="accordion-collapse collapse" data-bs-parent="#certificatesAccordion">
+          <div class="accordion-body">
+            <div class="ratio ratio-4x3">
+              <iframe src="reports/Docs/CSR_1.pdf" title="CSR Certificate" allowfullscreen></iframe>
+            </div>
+            <div class="text-center mt-3">
+              <a href="reports/Docs/CSR_1.pdf" target="_blank" class="btn btn-outline-primary">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 
   <!-- Footer -->
