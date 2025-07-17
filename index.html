@@ -75,7 +75,7 @@
           <li class="nav-item"><a class="nav-link" href="/programs">Programs</a></li>
           <li class="nav-item"><a class="nav-link" href="/donate">Donate</a></li>
           <li class="nav-item"><a class="nav-link" href= "https://docs.google.com/forms/d/e/1FAIpQLSfI9lNqHRFcr_aDrFpEAbmXVG6QuV6JtSBXzyTj0U8LxT875Q/viewform?usp=dialog">Volunteer</a></li>
-          <li class="nav-item"><a class="nav-link" href="/reports">Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="/report">Reports</a></li>
           <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -115,6 +115,15 @@
     </div>
   </div>
 </section>
+
+<!-- Event Marquee Section -->
+<div class="event-marquee">
+  <marquee behavior="scroll" direction="left" scrollamount="5" class="marquee-text">
+    📢 Loading latest event...
+  </marquee>
+  <a href="https://wa.me/919876543210" class="event-link" target="_blank">Click here to contact us about the event</a>
+</div>
+
     <!-- ======== About Snapshot ======== -->
 <section id="about-snapshot" class="py-5">
   <div class="container">
@@ -343,7 +352,7 @@
             </div>
         </div>
         <p>© 2025 Shiksha Abhiyan Educational Society</p>
-        <p><small>Registered under Societies Act S/64796 • GSTIN: 07AAGCS0152N1ZF</small></p>
+        <p><small>Registered under Societies Act S/64796 </small></p>
       </div>
     </div>
  
@@ -397,6 +406,22 @@
 
     });
   </script>
+
+  <script>
+  fetch('notice.txt')
+    .then(response => response.text())
+    .then(data => {
+      const marqueeText = document.querySelector('.marquee-text');
+      const notice = data.trim();
+      marqueeText.textContent = notice !== ""
+        ? ` ${notice}`
+        : "No upcoming events at the moment.";
+    })
+    .catch(() => {
+      document.querySelector('.marquee-text').textContent = "Event notice could not be loaded.";
+    });
+</script>
+
 
   </body>
 </html>
